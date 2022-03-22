@@ -1,0 +1,29 @@
+{
+  "kind": "singleType",
+  "collectionName": "about_uses",
+  "info": {
+    "singularName": "about-us",
+    "pluralName": "about-uses",
+    "displayName": "About Us",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string",
+      "required": true,
+      "default": "About Us"
+    },
+    "Description": {
+      "type": "text",
+      "required": true
+    },
+    "Footer_Text": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

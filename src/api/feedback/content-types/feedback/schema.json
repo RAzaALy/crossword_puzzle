@@ -1,0 +1,36 @@
+{
+  "kind": "collectionType",
+  "collectionName": "feedbacks",
+  "info": {
+    "singularName": "feedback",
+    "pluralName": "feedbacks",
+    "displayName": "Feedback",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Page_Title": {
+      "type": "string",
+      "required": false,
+      "default": "Feedback"
+    },
+    "Sub_Title": {
+      "type": "string",
+      "default": "How did we do it?"
+    },
+    "Rating": {
+      "type": "integer",
+      "required": true,
+      "max": 5,
+      "min": 0,
+      "default": 0
+    },
+    "Message": {
+      "type": "text",
+      "required": true
+    }
+  }
+}

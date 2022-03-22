@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "reports",
+  "info": {
+    "singularName": "report",
+    "pluralName": "reports",
+    "displayName": "Report",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Problem": {
+      "type": "enumeration",
+      "enum": [
+        "Nudity",
+        "Violance",
+        "Harassment",
+        "Abusive",
+        "Others"
+      ],
+      "required": true
+    },
+    "Problem_Description": {
+      "type": "text",
+      "required": true
+    },
+    "discuss_puzzle": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discuss-puzzle.discuss-puzzle"
+    },
+    "discuss_puzzle_comment": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::discuss-puzzle-comment.discuss-puzzle-comment"
+    }
+  }
+}

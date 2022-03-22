@@ -1,0 +1,32 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discuss_puzzle_comments",
+  "info": {
+    "singularName": "discuss-puzzle-comment",
+    "pluralName": "discuss-puzzle-comments",
+    "displayName": "Discuss_Puzzle_Comments",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Comment": {
+      "type": "string",
+      "required": true,
+      "default": "Write a Comment"
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "discuss_puzzle": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::discuss-puzzle.discuss-puzzle",
+      "inversedBy": "discuss_puzzle_comments"
+    }
+  }
+}

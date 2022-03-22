@@ -1,0 +1,42 @@
+{
+  "kind": "collectionType",
+  "collectionName": "discuss_puzzles",
+  "info": {
+    "singularName": "discuss-puzzle",
+    "pluralName": "discuss-puzzles",
+    "displayName": "Discuss_Puzzles",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Message": {
+      "type": "text",
+      "required": true
+    },
+    "Image_Upload": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "users_permissions_user": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "plugin::users-permissions.user"
+    },
+    "discuss_puzzle_comments": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::discuss-puzzle-comment.discuss-puzzle-comment",
+      "mappedBy": "discuss_puzzle"
+    }
+  }
+}

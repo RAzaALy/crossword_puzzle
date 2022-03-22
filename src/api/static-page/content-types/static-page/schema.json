@@ -4,7 +4,8 @@
   "info": {
     "singularName": "static-page",
     "pluralName": "static-pages",
-    "displayName": "Static Pages"
+    "displayName": "Static Pages",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
